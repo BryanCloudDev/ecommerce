@@ -27,4 +27,11 @@ function setDate($date){
     $date = "{$months["$month"]} $day, $year";
     return $date;
 }
+
+function typeOfPhoto($file){
+    $regExp = '/^(jpg|gif|png|jpeg)$/';
+    if(preg_match($regExp,$file)){
+        return true;
+    };
+}
 ?>

@@ -7,17 +7,17 @@
     <title>Sign In</title>
 </head>
 <body>
-    <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="">
+    <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
         <label for="name">Name</label>
-        <input type="text" name="name" value="<?= $name;?>" required>
+        <input type="text" name="name" required value="<?php if($errors == []){echo '';}else{echo $name;};?>">
         <label for="lastName">Last Name</label>
-        <input type="text" name="lastName" required>
+        <input type="text" name="lastName" required value="<?php if($errors == []){echo '';}else{echo $lastName;};?>">
         <label for="email">Email</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" required value="<?php if($errors == []){echo '';}else{echo $email;};?>">
         <label for="password">Password</label>
-        <input type="password" name="password" required>
+        <input type="password" name="password" required value="<?php if($errors == []){echo '';}else{echo $password;};?>">
         <label for="username">Username</label>
-        <input type="text" name="username" required>
+        <input type="text" name="username" required value="<?php if($errors == []){echo '';}else{echo $username;};?>">
         <label for="profilePhoto">Desired profile photo</label>
         <input type="file" name="profilePhoto">
         <input type="submit" name="submit" value="Send">

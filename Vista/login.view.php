@@ -7,12 +7,12 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="">
-        <label for="email">Correo</label>
-        <input type="email" name="email" id="password">
-        <label for="password">Contrasena</label>
-        <input type="password" name="password" id="">
-        <input type="submit" value="Enviar">
+<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
+        <label for="userEmail">Email or username</label>
+        <input type="text" name="userEmail" id="userEmail">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <input type="submit" name="submit" value="Log In">
     </form>
 </body>
 </html>

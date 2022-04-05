@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The best commerce</title>
+    <title>La cachada</title>
 </head>
 <body>
-    <h1>Bienvenido al e-commerce del mundo</h1>
+    <h1>Bienvenido a la cachada</h1>
+    <a href="logout.php">Log out</a>
+
 </body>
 </html>
