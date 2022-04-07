@@ -1,18 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
-        <label for="userEmail">Email or username</label>
-        <input type="text" name="userEmail" id="userEmail">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
-        <input type="submit" name="submit" value="Log In">
-    </form>
-</body>
-</html>
+<?php require('./Vista/components/header.php');?>
+<div class="wrap">
+    <main class="main">
+        <div class="container">
+            <div class="imgSide">
+                <div class="imgContainer">
+                    <img src="https://i.imgur.com/zExpenQ.png" alt="" aria-hidden="true">
+                </div>
+            </div>
+            <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
+                <h2>Iniciar sesion</h2>
+                <div class="row">
+                    <input type="text" name="userEmail" id="userEmail" placeholder="Correo o nombre de usuario">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div class="row">
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                </div>
+                <div class="login">
+                    <input type="submit" name="submit" value="Login">
+                </div>
+                <div class="error">
+                    <?php if($errors != []):?>
+                        <ul>
+                        <?php foreach($errors as $error):?>
+                            <li><?= $error;?></li>
+                        <?php endforeach;?>
+                        </ul>
+                    <?php endif;?>
+                </div>
+                <div class="createAccount">
+                    <a class="txt2" href="./registro.php">Crea una cuenta<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+<?php require('./Vista/components/footer.php');?>

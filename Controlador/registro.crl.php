@@ -41,7 +41,7 @@ if(isset($_POST['submit'])){
             $errors['email'] = 'Please enter a valid email address';
         }
         if(Usuario::existsEmail($email) > 0){
-            $errors['email'] = 'This email is already in use';
+            $errors['email'] = 'This email is already in use. <a href="login.php">Log in?<a>';
         }
     }
     else{

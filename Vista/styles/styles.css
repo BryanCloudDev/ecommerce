@@ -1,0 +1,208 @@
+:root {
+	--primary-color: #fff;
+    --secondary-color: #000;
+	--primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: var(--primary-font);
+	font-size: 1.6rem;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 99%);
+}
+
+.wrap {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main {
+    margin: 30px 0px;
+	width: 85%;
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+	border-radius: 15px;
+    background-color: var(--primary-color);
+    padding: 100px 15px 33px 15px;
+}
+
+.container {
+	width: 98%;
+}
+
+.container .imgSide{
+    display: none;
+}
+
+.container form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container form h2{
+    color: var(--secondary-color);
+    width: 100%;
+    text-align: center;
+    padding-bottom: 54px;
+    margin: 0px;
+}
+
+.container form .row{
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 25px;
+    background-color: #e6e6e6;
+    display: flex;
+    align-items: baseline;
+}
+
+.container form .row .fa{
+    padding-left: 30px;
+    color: #666666;
+    order: 1;
+    transition: 0.5s ease;
+}
+
+.container form .row .fa-lock{
+    margin-right: 5px;
+}
+
+.container form input:focus ~ .fa{
+    color: #57b846;
+}
+
+.custom-input-file {
+	width: 100%;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: var(--main-bg-color);
+	color: #fff;
+	cursor: pointer;
+	min-height: 30px;
+	overflow: hidden;
+	position: relative;
+}
+
+.custom-input-file .input-file {
+	cursor: pointer;
+	left: -101px;
+	margin:2px 2px;
+	outline: 0 none;
+	position: absolute;
+}
+
+.row input{
+    padding: 13px 15px;
+    width: 100%;
+    border: none;
+    background-color: #e6e6e6;
+    border-radius: 25px;
+    outline: none;
+    color: #666666;
+    order: 2;
+}
+
+.row input::placeholder{
+    color: #999999;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.login{
+    padding-top: 20px;
+    width: 100%;
+}
+
+.login input{
+    width: 100%;
+    border-radius: 25px;
+    background-color: #57b846;
+    border: none;
+    padding: 14px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.login input:hover{
+    background-color: #333333;
+}
+
+.createAccount{
+    padding-top: 136px;   
+}
+
+.createAccount a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #666666;
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease;
+}
+.createAccount a i{
+    margin-left: 5px;
+}
+
+.createAccount a:hover{
+    color: #57b846;
+}
+
+.error{
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 25px;
+    background-color: rgb(243, 42, 42);
+}
+
+.error ul li{
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.error ul li a{
+    color: var(--primary-color);
+}
+
+@media screen and (min-width: 480px) {
+    .container{
+        max-width: 40rem;
+    }
+}
+
+@media screen and (min-width: 770px) {
+    .main{
+        max-width: 96rem;
+    }
+    .container{
+        display: flex;
+        max-width: 95%;
+    }
+    .container .imgSide{
+        display: block;
+    }
+    .container .imgSide,
+    .container form{
+        width: 50%;
+    }
+    .imgSide .imgContainer{
+        width: 80%;
+    }
+    .imgContainer img{
+        width: 100%;
+    }
+}

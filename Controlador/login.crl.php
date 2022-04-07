@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
 
     if(Usuario::verifyUserEmail($userEmail) == 1){
         $hash = Usuario::verifyUserPassword($userEmail);
-        
+
         if(password_verify($password,$hash)){
             $user = Usuario::getUserbyId($userEmail);
 
@@ -27,8 +27,4 @@ if(isset($_POST['submit'])){
     else{
         $errors['errors'] = 'Incorrect username or password';
     }
-
-
 }
-
-?>
