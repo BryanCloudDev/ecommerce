@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La cachada</title>
-</head>
-<body>
-    <h1>Bienvenido a la cachada</h1>
-    <a href="logout.php">Log out</a>
+<?php require('./Vista/components/header.php');?>
 
-</body>
-</html>
+<div class="wrap">
+    <main class="main">
+        <div class="container index">
+            <a href="logout.php">L</a>
+        </div>
+    </main>
+</div>
+<?php require('./Vista/components/footer.php');?>

@@ -103,9 +103,9 @@ if(isset($_POST['submit'])){
         $key = '5e83b87c6ff6b1cc4d941bf315281da1';
         $token = md5($email.$password.$key);
         $password = Usuario::encPass($password);
-        // if(password_verify($password,$hash)){
-        // }
         $user = new Usuario($token,$name,$lastName,$email,$password,$username,$dest_path);
         $user->createNewUser();
+
+        header('Location: login.php');
     }
 }

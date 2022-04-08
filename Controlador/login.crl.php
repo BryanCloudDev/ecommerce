@@ -8,6 +8,7 @@ $errors = [];
 
 if(isset($_POST['submit'])){
     $userEmail = clean_data($_POST['userEmail']);
+
     $password = clean_data($_POST['password']);
 
     if(Usuario::verifyUserEmail($userEmail) == 1){
@@ -15,8 +16,9 @@ if(isset($_POST['submit'])){
 
         if(password_verify($password,$hash)){
             $user = Usuario::getUserbyId($userEmail);
+            var_dump($user);
 
-            $_SESSION['user'] =  $user['id'];
+            $_SESSION['user'] =  $user['id_user'];
 
             header('Location: index.php');
         }

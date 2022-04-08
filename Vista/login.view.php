@@ -1,7 +1,8 @@
 <?php require('./Vista/components/header.php');?>
+
 <div class="wrap">
-    <main class="main">
-        <div class="container">
+    <main class="main login">
+        <div class="container login">
             <div class="imgSide">
                 <div class="imgContainer">
                     <img src="https://i.imgur.com/zExpenQ.png" alt="" aria-hidden="true">
@@ -20,15 +21,15 @@
                 <div class="login">
                     <input type="submit" name="submit" value="Login">
                 </div>
-                <div class="error">
-                    <?php if($errors != []):?>
+                <?php if($errors != []):?>
+                    <div class="error">
                         <ul>
                         <?php foreach($errors as $error):?>
                             <li><?= $error;?></li>
                         <?php endforeach;?>
                         </ul>
-                    <?php endif;?>
-                </div>
+                    </div>
+                <?php endif;?>
                 <div class="createAccount">
                     <a class="txt2" href="./registro.php">Crea una cuenta<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                     </a>

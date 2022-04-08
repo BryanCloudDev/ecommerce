@@ -13,8 +13,8 @@
 
 <?php require('./Vista/components/header.php');?>
 <div class="wrap">
-    <main class="main">
-        <div class="container">
+    <main class="main login">
+        <div class="container login">
             <div class="imgSide">
                 <div class="imgContainer">
                     <img src="https://i.imgur.com/zExpenQ.png" alt="" aria-hidden="true">
@@ -55,7 +55,7 @@
                         <?php endforeach;?>
                         </ul>
                     </div>
-                    <?php endif;?>
+                <?php endif;?>
             </form>
         </div>
     </main>

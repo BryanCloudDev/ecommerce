@@ -104,11 +104,10 @@ class Usuario{
             ':email' => $value,
             ':username' => $value
         ]);
-        $result = $stmt->fetch(PDO::FETCH_COLUMN, 0);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
         $stmt = null;
         return $result;
     }
 }
-//SELECT `email`, `password` FROM `users` WHERE `email` = 'root' OR `username` = 'root';
 ?>

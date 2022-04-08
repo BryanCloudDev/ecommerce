@@ -24,7 +24,7 @@ body {
 	align-items: center;
 }
 
-.main {
+.main.login {
     margin: 30px 0px;
 	width: 85%;
 	display: flex;
@@ -35,22 +35,24 @@ body {
     padding: 100px 15px 33px 15px;
 }
 
-.container {
+/*Estilos del login*/
+
+.container.login {
 	width: 98%;
 }
 
-.container .imgSide{
+.container.login .imgSide{
     display: none;
 }
 
-.container form{
+.container.login form{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.container form h2{
+.container.login form h2{
     color: var(--secondary-color);
     width: 100%;
     text-align: center;
@@ -58,7 +60,7 @@ body {
     margin: 0px;
 }
 
-.container form .row{
+.container.login form .row{
     margin-bottom: 10px;
     width: 100%;
     border-radius: 25px;
@@ -67,18 +69,18 @@ body {
     align-items: baseline;
 }
 
-.container form .row .fa{
+.container.login form .row .fa{
     padding-left: 30px;
     color: #666666;
     order: 1;
     transition: 0.5s ease;
 }
 
-.container form .row .fa-lock{
+.container.login form .row .fa-lock{
     margin-right: 5px;
 }
 
-.container form input:focus ~ .fa{
+.container.login form input:focus ~ .fa{
     color: #57b846;
 }
 
@@ -119,12 +121,12 @@ body {
     font-size: 1.5rem;
 }
 
-.login{
+form .login{
     padding-top: 20px;
     width: 100%;
 }
 
-.login input{
+form .login input{
     width: 100%;
     border-radius: 25px;
     background-color: #57b846;
@@ -138,7 +140,7 @@ body {
     cursor: pointer;
 }
 
-.login input:hover{
+form .login input:hover{
     background-color: #333333;
 }
 
@@ -179,7 +181,7 @@ body {
 }
 
 @media screen and (min-width: 480px) {
-    .container{
+    .container.login{
         max-width: 40rem;
     }
 }
@@ -188,15 +190,15 @@ body {
     .main{
         max-width: 96rem;
     }
-    .container{
+    .container.login{
         display: flex;
         max-width: 95%;
     }
-    .container .imgSide{
+    .container.login .imgSide{
         display: block;
     }
-    .container .imgSide,
-    .container form{
+    .container.login .imgSide,
+    .container.login form{
         width: 50%;
     }
     .imgSide .imgContainer{
@@ -205,4 +207,10 @@ body {
     .imgContainer img{
         width: 100%;
     }
+}
+
+/*Estilos del index*/
+
+.container.index{
+
 }
